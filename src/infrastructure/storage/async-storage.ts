@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export async function setItem(key: string, value: string): Promise<void> {
-  return AsyncStorage.setItem(key, value);
+  await AsyncStorage.setItem(key, value);
 }
 
 export async function getItem(key: string): Promise<string | null> {
@@ -9,11 +9,11 @@ export async function getItem(key: string): Promise<string | null> {
 }
 
 export async function removeItem(key: string): Promise<void> {
-  return AsyncStorage.removeItem(key);
+  await AsyncStorage.removeItem(key);
 }
 
 export async function setJSON<T>(key: string, value: T): Promise<void> {
-  return AsyncStorage.setItem(key, JSON.stringify(value));
+  await AsyncStorage.setItem(key, JSON.stringify(value));
 }
 
 export async function getJSON<T>(key: string): Promise<T | null> {
@@ -22,5 +22,6 @@ export async function getJSON<T>(key: string): Promise<T | null> {
 }
 
 export async function clearAll(): Promise<void> {
-  return AsyncStorage.clear();
+  const keys = await AsyncStorage.getAllKeys();
+  await AsyncStorage.multiRemove(keys);
 }

@@ -1,11 +1,19 @@
-import { Text, View } from "react-native";
+import { useEffect } from "react";
+import { useRouter } from "expo-router";
+import { getItem } from "@/infrastructure/storage/async-storage";
 
 export default function Index() {
-  return (
-    <View className="flex-1 justify-center items-center">
-      <Text className="text-xl font-bold text-red-900">
-        Edit app/index.tsx to edit this screen.
-      </Text>
-    </View>
-  );
+  const router = useRouter();
+
+  useEffect(() => {
+    getItem("onboarding_completed").then((value) => {
+      if (value !== "true") {
+        router.replace("/(onboarding)" as any);
+      } else {
+        router.replace("/(home)" as any);
+      }
+    });
+  }, [router]);
+
+  return null;
 }
