@@ -19,7 +19,7 @@ export default function OnboardingScreen() {
   if (!ready) {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#fff" }}>
-        <Text style={{ color: "#9ca3af" }}>Carregando...</Text>
+        <Text style={{ fontFamily: "Outfit_400Regular", color: "#9ca3af" }}>Carregando...</Text>
       </View>
     );
   }
@@ -32,10 +32,10 @@ export default function OnboardingScreen() {
           <View style={{ width: 128, height: 128, backgroundColor: "#eef2ff", borderRadius: 64, justifyContent: "center", alignItems: "center", marginBottom: 24 }}>
             <Text style={{ fontSize: 48 }}>🎓</Text>
           </View>
-          <Text style={{ fontSize: 28, fontWeight: "bold", color: "#111827", textAlign: "center", marginBottom: 12 }}>
+          <Text style={{ fontFamily: "Outfit_700Bold", fontSize: 28, color: "#111827", textAlign: "center", marginBottom: 12 }}>
             Bem-vindo ao Classpoint
           </Text>
-          <Text style={{ fontSize: 16, color: "#6b7280", textAlign: "center", lineHeight: 24 }}>
+          <Text style={{ fontFamily: "Outfit_400Regular", fontSize: 16, color: "#6b7280", textAlign: "center", lineHeight: 24 }}>
             O aplicativo que ajuda você a gerenciar suas aulas, alunos e matérias de forma simples e eficiente.
           </Text>
         </View>
@@ -46,7 +46,7 @@ export default function OnboardingScreen() {
           style={{ backgroundColor: "#4f46e5", paddingVertical: 16, borderRadius: 12, alignItems: "center" }}
           onPress={handleComplete}
         >
-          <Text style={{ color: "#fff", fontSize: 18, fontWeight: "600" }}>Vamos começar</Text>
+          <Text style={{ fontFamily: "Outfit_600SemiBold", color: "#fff", fontSize: 18 }}>Vamos começar</Text>
         </TouchableOpacity>
       </View>
     </View>
