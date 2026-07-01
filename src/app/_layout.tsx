@@ -13,10 +13,10 @@ export default function RootLayout() {
   useEffect(() => {
     async function loadFonts() {
       await Font.loadAsync({
-        Outfit_400Regular: require("@expo-google-fonts/outfit/400Regular/Outfit_400Regular.ttf.png"),
-        Outfit_500Medium: require("@expo-google-fonts/outfit/500Medium/Outfit_500Medium.ttf.png"),
-        Outfit_600SemiBold: require("@expo-google-fonts/outfit/600SemiBold/Outfit_600SemiBold.ttf.png"),
-        Outfit_700Bold: require("@expo-google-fonts/outfit/700Bold/Outfit_700Bold.ttf.png"),
+        "Outfit-Regular": require("@expo-google-fonts/outfit/400Regular/Outfit_400Regular.ttf.png"),
+        "Outfit-Medium": require("@expo-google-fonts/outfit/500Medium/Outfit_500Medium.ttf.png"),
+        "Outfit-SemiBold": require("@expo-google-fonts/outfit/600SemiBold/Outfit_600SemiBold.ttf.png"),
+        "Outfit-Bold": require("@expo-google-fonts/outfit/700Bold/Outfit_700Bold.ttf.png"),
       });
       setLoaded(true);
     }
