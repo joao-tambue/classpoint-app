@@ -1,9 +1,9 @@
 import "../global.css";
 
-import { useEffect, useState } from "react";
+import * as Font from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import * as Font from "expo-font";
+import { useEffect, useState } from "react";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -13,10 +13,10 @@ export default function RootLayout() {
   useEffect(() => {
     async function loadFonts() {
       await Font.loadAsync({
-        "Outfit-Regular": require("@expo-google-fonts/outfit/400Regular/Outfit_400Regular.ttf.png"),
-        "Outfit-Medium": require("@expo-google-fonts/outfit/500Medium/Outfit_500Medium.ttf.png"),
-        "Outfit-SemiBold": require("@expo-google-fonts/outfit/600SemiBold/Outfit_600SemiBold.ttf.png"),
-        "Outfit-Bold": require("@expo-google-fonts/outfit/700Bold/Outfit_700Bold.ttf.png"),
+        "Outfit-Regular": require("../../assets/fonts/outfit/OutfitRegular.ttf"),
+        "Outfit-Medium": require("../../assets/fonts/outfit/OutfitMedium.ttf"),
+        "Outfit-SemiBold": require("../../assets/fonts/outfit/OutfitSemiBold.ttf"),
+        "Outfit-Bold": require("../../assets/fonts/outfit/OutfitBold.ttf"),
       });
       setLoaded(true);
     }

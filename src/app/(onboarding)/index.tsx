@@ -33,9 +33,9 @@ export default function OnboardingScreen() {
       </ImageBackground>
 
       <SafeAreaView className="flex-1">
-        <View className="px-8 pt-2">
+        <View className="px-8 pt-16">
           <Text
-            className="text-white text-[31px] font-semibold tracking-[-0.6px]"
+            className="text-white text-[31px] tracking-[-0.6px]"
             style={{ fontFamily: "Outfit-SemiBold" }}
           >
             {logoText}
@@ -54,8 +54,8 @@ export default function OnboardingScreen() {
         <View className="bg-white rounded-t-[38px] px-7 pt-8 pb-8">
           <View className="items-center px-2">
             <Text
-              className="text-[#222833] text-[24px] leading-[29px] font-bold text-center tracking-[-0.6px]"
-              style={{ fontFamily: "Outfit-Bold" }}
+              className="text-[#222833] text-[24px] leading-[29px] text-center tracking-[-0.6px]"
+              style={{ fontFamily: "Outfit-SemiBold" }}
             >
               Materiais & Informações
               {"\n"}
@@ -63,8 +63,8 @@ export default function OnboardingScreen() {
             </Text>
 
             <Text
-              className="mt-4 text-[#6C747B] text-[14px] leading-[21px] text-center"
-              style={{ fontFamily: "Outfit-SemiBold" }}
+              className="mt-4 text-[#6C747B] text-[14px] leading-[21px] text-center tracking-[-0.2px]"
+              style={{ fontFamily: "Outfit-Medium" }}
             >
               Tenha todos os recursos de aprendizagem ao seu alcance. Navegue por
               disciplinas, encontre conteúdos importantes em segundos e mantenha
