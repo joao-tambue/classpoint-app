@@ -25,12 +25,36 @@ export default function OnboardingScreen() {
       <StatusBar barStyle="light-content" translucent backgroundColor="transparent" />
 
       <ImageBackground
-        source={require("../../../assets/images/bg-app.png")}
+        source={require("../../../assets/images/onboarding/bg-app.png")}
         resizeMode="cover"
         className="absolute inset-0"
       >
         <View className="absolute inset-0 bg-black/10" />
       </ImageBackground>
+
+      <Image
+        source={require("../../../assets/images/onboarding/flower-right.png")}
+        className="absolute"
+        style={{
+          width: 120,
+          height: 120,
+          top: 100,
+          right: -25,
+          opacity: 0.25,
+        }}
+      />
+
+      <Image
+        source={require("../../../assets/images/onboarding/flower-left.png")}
+        className="absolute"
+        style={{
+          width: 120,
+          height: 120,
+          left: -30,
+          bottom: 350,
+          opacity: 0.25,
+        }}
+      />
 
       <SafeAreaView className="flex-1">
         <View className="px-8 pt-16">
@@ -45,7 +69,7 @@ export default function OnboardingScreen() {
 
         <View className="flex-1 items-center justify-center px-6">
           <Image
-            source={require("../../../assets/images/ilustration.png")}
+            source={require("../../../assets/images/onboarding/ilustration.png")}
             resizeMode="contain"
             className="w-[255px] h-[255px]"
           />
